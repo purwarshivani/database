@@ -1,0 +1,24 @@
+
+--@E:\shivani\creat_18413701.txt
+
+CREATE TABLE sites(
+site_id NUMBER(5),
+site_name VARCHAR2(20)
+);
+
+
+ALTER TABLE sites ADD(
+location VARCHAR2(30));
+
+CREATE TABLE SUBJECT_AREAS(
+subject_id NUMBER(12),
+subject_name VARCHAR2(7),
+description VARCHAR2(200));
+
+CREATE TABLE TRAINERS(
+trainer_id NUMBER(6),
+t_firstname VARCHAR2(8),
+t_surname VARCHAR2(7),
+mentor_id NUMBER(6),
+contact_no VARCHAR2(10),
+rate NUMBER(6));

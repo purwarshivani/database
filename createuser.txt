@@ -1,0 +1,31 @@
+--@E:\shivani\createuser.txt
+
+--creating normal users
+create user shivani123 identified by shivani123;
+grant create session to shivani123;
+grant create table to shivani123;
+grant create view to shivani123;
+grant create sequence to shivani123;
+grant create synonym to shivani123;
+grant create procedure to shivani123;
+grant create trigger to shivani123;
+grant create cluster to shivani123;
+grant create type to shivani123;
+grant unlimited tablespace to shivani123;
+
+--to provide all privileges
+--grant all privileges to username;
+
+--to connect to the users
+--connect username;
+--password:
+--SELECT * FROM TAB;
+--DESC TAB;
+--DESC books;
+
+-- to check particular table
+-- SELECT tname from TAB;
+
+CREATE TABLE students(
+firstname VARCHAR2(10),
+lastname VARCHAR2(8));

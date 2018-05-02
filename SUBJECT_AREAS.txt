@@ -1,0 +1,6 @@
+--@E:\shivani\SUBJECT_AREAS.txt
+
+CREATE TABLE SUBJECT_AREAS(
+subject_id NUMBER(12),
+subject_name VARCHAR2(7),
+description VARCHAR2(200));
