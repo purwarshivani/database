@@ -49,4 +49,52 @@ ALTER TABLE students ADD(
  UNIQUE (car_reg);
  */
 
+ ALTER TABLE courses
+ ADD CONSTRAINT pk_courses
+ PRIMARY KEY (course_id);
+ 
+ 
+ALTER TABLE courses
+ADD CONSTRAINT fk_c_subject_areas
+FOREIGN KEY (subject_id)
+REFERENCES subject_areas(subject_id);
+
+ALTER TABLE course_runs
+ADD CONSTRAINT fk_c_sites
+FOREIGN KEY (site_id)
+REFERENCES sites(site_id);
+
+ALTER TABLE course_runs
+ADD CONSTRAINT fk_c_courses
+FOREIGN KEY(course_id)
+REFERENCES courses(course_id);
+
+ALTER TABLE course_runs
+ADD CONSTRAINT fk_c_TRAINERS
+FOREIGN KEY (trainer_id)
+REFERENCES TRAINERS(trainer_id);
+
+							
+
+ALTER TABLE course_runs
+ADD CONSTRAINT pk_course_runs
+PRIMARY KEY (running_id);
+
+
+ALTER TABLE attendances
+ADD CONSTRAINT fk_c_course_runs
+FOREIGN KEY(running_id)
+REFERENCES course_runs(running_id);
+
+
+ALTER TABLE attendances
+ADD CONSTRAINT fk_c_students
+FOREIGN KEY (student_id)
+REFERENCES students(student_id);
+
+
+
+ALTER TABLE attendances
+ADD CONSTRAINT pk_attendances
+PRIMARY KEY(running_id,student_id);
 
