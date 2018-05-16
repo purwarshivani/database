@@ -18,3 +18,23 @@ ALTER TABLE students DROP
 ALTER TABLE TRAINERS
 DROP CONSTRAINT u_car_reg;
 
+
+ALTER TABLE courses
+DROP CONSTRAINT fk_c_subject_areas;
+
+ALTER TABLE courses
+DROP CONSTRAINT  pk_courses;
+
+DROP TABLE course_runs;
+PURGE recyclebin;
+
+ALTER TABLE attendances
+DROP CONSTRAINT fk_c_course_runs;
+
+ALTER TABLE attendances
+DROP CONSTANT  fk_c_students;
+
+ALTER TABLE attendances
+DROP CONSTRAINT pk_attendances;
+
+
