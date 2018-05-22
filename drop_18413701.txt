@@ -38,3 +38,22 @@ ALTER TABLE attendances
 DROP CONSTRAINT pk_attendances;
 
 
+DROP TABLE attendance;
+
+
+ALTER TABLE invoices
+DROP CONSTRAINT fk_i_students;
+
+ALTER TABLE invoices
+DROP CONSTRAINT fk_i_companies;
+
+ALTER TABLE invoices
+DROP CONSTRAINT pk_invoices;
+
+DROP TABLE invoices;
+
+
+ALTER TABLE companies
+DROP CONSTRAINT pk_companies;
+
+DROP TABLE companies;
