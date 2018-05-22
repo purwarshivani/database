@@ -82,13 +82,13 @@ PRIMARY KEY (running_id);
 
 
 ALTER TABLE attendances
-ADD CONSTRAINT fk_c_course_runs
+ADD CONSTRAINT fk_a_course_runs
 FOREIGN KEY(running_id)
 REFERENCES course_runs(running_id);
 
 
 ALTER TABLE attendances
-ADD CONSTRAINT fk_c_students
+ADD CONSTRAINT fk_a_students
 FOREIGN KEY (student_id)
 REFERENCES students(student_id);
 
@@ -98,3 +98,22 @@ ALTER TABLE attendances
 ADD CONSTRAINT pk_attendances
 PRIMARY KEY(running_id,student_id);
 
+
+
+ALTER TABLE companies
+ADD CONSTRAINT pk_companies
+PRIMARY KEY (company_id);
+
+ALTER TABLE invoices
+ADD CONSTRAINT pk_invoices
+PRIMARY KEY (invoice_id);
+
+ALTER TABLE invoices
+ADD CONSTRAINT fk_i_companies
+FOREIGN KEY(company_id)
+REFERENCES companies(company_id);
+
+ALTER TABLE invoices
+ADD CONSTRAINT fk_i_students
+FOREIGN KEY (student_id)
+REFERENCES students(student_id);
