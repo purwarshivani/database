@@ -58,6 +58,16 @@ CREATE TABLE companies(
 company_id NUMBER(6),
 company_name VARCHAR2(10),
 address VARCHAR2(10),
+contact_no		VARCHAR2(15),
+no_of_emp		NUMBER(4)
+);
 
 
+
+CREATE TABLE invoices(
+invoice_id		NUMBER(5),
+company_id		NUMBER(5),
+student_id		NUMBER(5),
+billing_date	DATE
+);
 
