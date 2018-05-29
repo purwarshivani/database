@@ -71,3 +71,26 @@ student_id		NUMBER(5),
 billing_date	DATE
 );
 
+
+--create sequence for invoice
+CREATE SEQUENCE seq_invoice
+INCREMENT BY 1
+START WITH 10000;
+
+--create sequence for trainers
+CREATE SEQUENCE seq_trainers
+INCREMENT BY 1
+START WITH 101;
+
+--create sequence for sites
+CREATE SEQUENCE seq_sites
+INCREMENT BY 1
+START WITH 1;
+
+--create sequence for students
+CREATE SEQUENCE seq_students
+INCREMENT BY 1
+START WITH 2000000
+MAXVALUE 3000000;
+
+
