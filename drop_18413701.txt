@@ -1,13 +1,5 @@
 --@E:\shivani\drop_18413701.txt
-DROP TABLE sites;
-DROP TABLE trainers;
-DROP TABLE SUBJECT_AREAS;
-PURGE recyclebin;
-*/
-/*
-DROP TABLE students;
-*/
-/*
+
 AlTER TABLE students
 DROP CONSTRAINT pk_students;
 */
@@ -38,9 +30,6 @@ ALTER TABLE attendances
 DROP CONSTRAINT pk_attendances;
 
 
-DROP TABLE attendance;
-
-
 ALTER TABLE invoices
 DROP CONSTRAINT fk_i_students;
 
@@ -50,10 +39,21 @@ DROP CONSTRAINT fk_i_companies;
 ALTER TABLE invoices
 DROP CONSTRAINT pk_invoices;
 
-DROP TABLE invoices;
+DROP SEQUENCE seq_invoice;
+DROP SEQUENCE seq_trainers;
+DROP SEQUENCE seq_sites;
+DROP SEQUENCE seq_students;
 
 
 ALTER TABLE companies
 DROP CONSTRAINT pk_companies;
-
 DROP TABLE companies;
+DROP TABLE invoices;
+DROP TABLE students;
+DROP TABLE course_runs;
+DROP TABLE sites;
+DROP TABLE trainers;
+DROP TABLE courses;
+DROP TABLE subject_areas;
+DROP TABLE attendance;
+PURGE recyclebin;
