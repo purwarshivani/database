@@ -1,0 +1,70 @@
+--@E:\shivani\queries_18413701.txt
+
+SELECT * FROM STUDENTS;
+
+SELECT STUDENTS_FIRSTNAME,TEL_NO
+FROM STUDENTS
+
+--WHERE CLAUSE
+SELECT STUDENTS_FIRSTNAME,TEL_NO
+FROM STUDENTS
+WHERE country LIKE 'UK';
+
+--logical operators
+SELECT company_id, company_name,city, training_budget
+FROM companies
+WHERE company_id=40
+
+
+SELECT company_id, company_name,city, training_budget
+FROM companies
+WHERE company_id  BETWEEN and 30;
+
+SELECT company_id, company_name,city, training_budget
+FROM companies
+WHERE company_id IN(40,50,60);
+
+SELECT company_id, company_name,city, training_budget
+FROM companies
+where company_id  not BETWEEN 10 and 30;
+
+SELECT company_id, company_name,city, training_budget
+FROM companies
+WHERE company_id<40;
+
+SELECT company_id, company_name,city, training_budget
+FROM companies
+WHERE company_id>40;
+
+SELECT company_id, company_name,city, training_budget
+FROM companies
+WHERE company_id !=40;
+
+SELECT student_firstname,student_surname,city,country
+FROM students
+where student_surname BETWEEN 'E%' AND 'T%';
+
+
+
+
+SELECT student_firstname,student_surname,city,country
+FROM students
+WHERE student_surname <'F%';
+
+
+SELECT student_firstname,student_surname,city,country
+FROM students
+WHERE student_surname LIKE'%K%';
+
+
+SELECT student_firstname,student_surname,city,country
+FROM students
+WHERE student_surname LIKE '_OS%';
+
+SELECT student_firstname,student_surname,city,country
+FROM students
+WHERE student_surname '_o%E%';
+
+SELECT student_firstname,student_surname,city,country
+FROM students
+WHERE student_surname NOT LIKE '_O%';
